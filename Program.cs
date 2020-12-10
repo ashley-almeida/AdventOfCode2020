@@ -6,7 +6,7 @@ namespace AdventOfCode
     {
         static void Main(string[] args)
         {            
-            new day8().dostuffPart2();
+            day10.dostuffPart2();
         }
     }
 }
