@@ -48,30 +48,25 @@ public class Day13
             else
             {
                 busTimes.Add(int.Parse(inputs[timeDiff]), timeDiff);
-                maxTimeDiff = timeDiff;
                 Console.WriteLine($"Bus {inputs[timeDiff]} - time {timeDiff}");
             }
         }
 
-        BigInteger timestamp = 100000000000000;
-        return;
+        BigInteger timestamp = 0L;
+        //return;
         bool found = false;
-        busTimes[29] = maxTimeDiff;
 
-        while (!found)
+        long idMult = 1;
+
+        foreach (var busTime in busTimes)
         {
-            var thistime = false;
-            foreach (var busTime in busTimes)
+            while (((timestamp + busTime.Value) % busTime.Key) != 0)
             {
-                if (busTime.Value != 0 && timestamp % busTime.Value != 0)
-                {
-                    thistime = true;
-                    break;
-                }
+                timestamp += idMult;
             }
-            found = !thistime;
-            timestamp += maxTimeDiff;
-            Console.WriteLine(timestamp);
+            idMult *= busTime.Key;
         }
+
+        Console.WriteLine(timestamp);
     }
 }
