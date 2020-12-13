@@ -15,14 +15,14 @@ public class Day12
 
         int X = 0, Y = 0;
 
-        var inputs = inputString.Split(',').ToList();
+        var inputs = inputString.Split(',');
 
         char prevDirection = 'E';
 
 
-        for (int i = 0; i < inputs.Count; i++)
+        for (int i = 0; i < inputs.Length; i++)
         {
-            var direction = inputs[i][0..1].ToCharArray()[0];
+            var direction = inputs[i][0];
             var movement = int.Parse(inputs[i][1..]);
             Console.WriteLine($"{direction}-{movement}");
 
@@ -70,10 +70,10 @@ public class Day12
 
     private char GetNewDirection(char direction, int movement, char prevDirection)
     {
+        var preDirection = (int)Enum.Parse<Directions>(prevDirection.ToString());
+
         if (direction == 'L')
         {
-            var preDirection = (int)Enum.Parse(typeof(Directions), prevDirection.ToString());
-
             preDirection -= movement / 90;
 
             while (preDirection < 0)
@@ -84,8 +84,6 @@ public class Day12
         }
         else
         {
-            var preDirection = (int)Enum.Parse(typeof(Directions), prevDirection.ToString());
-
             preDirection += movement / 90;
 
             while (preDirection > 3)
@@ -98,18 +96,7 @@ public class Day12
 
     private char IntToEnumChar(int preDirection)
     {
-        switch (preDirection)
-        {
-            case 0:
-                return 'N';
-            case 1:
-                return 'E';
-            case 2:
-                return 'S';
-            default:
-                return 'W';
-
-        }
+        return ((Directions)preDirection).ToString()[0];
     }
 
     public void DoStuffPartTwo()
@@ -121,12 +108,12 @@ public class Day12
         int X = 10, Y = -1;
         int shipX = 0, shipY = 0;
 
-        var inputs = inputString.Split(',').ToList();
+        var inputs = inputString.Split(',');
 
 
-        for (int i = 0; i < inputs.Count; i++)
+        for (int i = 0; i < inputs.Length; i++)
         {
-            var direction = inputs[i][0..1].ToCharArray()[0];
+            var direction = inputs[i][0];
             var movement = int.Parse(inputs[i][1..]);
             Console.WriteLine($"{direction}-{movement}");
 
@@ -149,8 +136,8 @@ public class Day12
                     //shipY += movement;
                     break;
                 case 'F':
-                    shipX += (X) * movement;
-                    shipY += (Y) * movement;
+                    shipX += X * movement;
+                    shipY += Y * movement;
                     //direction = prevDirection;
                     break;
                 case 'R':
@@ -172,20 +159,15 @@ public class Day12
             {
                 case 90:
                 case -270:
-                    var t1 = X * -1;
-                    X = Y;
-                    Y = t1;
+                    (X, Y) = (Y, -X);
                     break;
                 case 180:
                 case -180:
-                    X = X * -1;
-                    Y = Y * -1;
+                    (X, Y) = (-X, -Y);
                     break;
                 case 270:
                 case -90:
-                    var t3 = X;
-                    X = Y * -1;
-                    Y = t3;
+                    (X, Y) = (-Y, X);
                     break;
                 default:
                     break;
