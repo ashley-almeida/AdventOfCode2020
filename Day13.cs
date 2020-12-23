@@ -5,8 +5,10 @@ using System.Collections.Generic;
 using System.Collections;
 using System.Numerics;
 
+
 public class Day13
 {
+    #pragma warning disable 219
     int placements = 0;
     public void DoStuffPartOne()
     {

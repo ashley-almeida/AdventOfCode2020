@@ -10,3 +10,16 @@ C:\Repos\AdventOfCode2020\obj\Debug\netcoreapp3.0\AdventOfCode.AssemblyInfoInput
 C:\Repos\AdventOfCode2020\obj\Debug\netcoreapp3.0\AdventOfCode.AssemblyInfo.cs
 C:\Repos\AdventOfCode2020\obj\Debug\netcoreapp3.0\AdventOfCode.dll
 C:\Repos\AdventOfCode2020\obj\Debug\netcoreapp3.0\AdventOfCode.pdb
+C:\Git\AoC\AdventOfCode2020\bin\Debug\netcoreapp3.0\AdventOfCode.exe
+C:\Git\AoC\AdventOfCode2020\bin\Debug\netcoreapp3.0\AdventOfCode.deps.json
+C:\Git\AoC\AdventOfCode2020\bin\Debug\netcoreapp3.0\AdventOfCode.runtimeconfig.json
+C:\Git\AoC\AdventOfCode2020\bin\Debug\netcoreapp3.0\AdventOfCode.runtimeconfig.dev.json
+C:\Git\AoC\AdventOfCode2020\bin\Debug\netcoreapp3.0\AdventOfCode.dll
+C:\Git\AoC\AdventOfCode2020\bin\Debug\netcoreapp3.0\AdventOfCode.pdb
+C:\Git\AoC\AdventOfCode2020\obj\Debug\netcoreapp3.0\AdventOfCode.csprojAssemblyReference.cache
+C:\Git\AoC\AdventOfCode2020\obj\Debug\netcoreapp3.0\AdventOfCode.AssemblyInfoInputs.cache
+C:\Git\AoC\AdventOfCode2020\obj\Debug\netcoreapp3.0\AdventOfCode.AssemblyInfo.cs
+C:\Git\AoC\AdventOfCode2020\obj\Debug\netcoreapp3.0\AdventOfCode.csproj.CoreCompileInputs.cache
+C:\Git\AoC\AdventOfCode2020\obj\Debug\netcoreapp3.0\AdventOfCode.dll
+C:\Git\AoC\AdventOfCode2020\obj\Debug\netcoreapp3.0\AdventOfCode.pdb
+C:\Git\AoC\AdventOfCode2020\obj\Debug\netcoreapp3.0\AdventOfCode.genruntimeconfig.cache

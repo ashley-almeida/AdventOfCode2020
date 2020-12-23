@@ -4,6 +4,7 @@ using System.Text.RegularExpressions;
 using System.Collections.Generic;
 using System.Collections;
 
+#pragma warning disable 219
 public class Day11
 {
     int placements = 0;
